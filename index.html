@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <header>
-        <img src="photo.jpg" alt="Cameron Evenson" style="width: 200px; height: 150px; border-radius: 50%; border: 4px solid white; margin-bottom: 1rem;">
-        <h1>Cameron Evenson</h1>
-        </header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cameron Evenson - Portfolio</title>
     <style>
         body { 
             font-family: Arial, Helvetica, sans-serif; 
@@ -19,20 +17,24 @@
             background: #2c3e50; 
             color: white; 
             text-align: center; 
-            padding: 4rem 1rem; 
+            padding: 3rem 1rem; 
         }
         h1 { 
             margin: 0; 
-            font-size: 2.5rem; 
+            font-size: 2.8rem; 
             color: white; 
         }
-        p.subtitle { 
-            font-size: 1.3rem; 
+        .subtitle { 
+            font-size: 1.25rem; 
             margin: 0.5rem 0 0; 
             color: #bdc3c7; 
         }
+        .contact-info {
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
         .container { 
-            max-width: 900px; 
+            max-width: 950px; 
             margin: 2rem auto; 
             padding: 2rem; 
             background: white; 
@@ -41,15 +43,36 @@
         }
         h2 { 
             color: #2c3e50; 
-            border-bottom: 2px solid #3498db; 
+            border-bottom: 3px solid #3498db; 
             padding-bottom: 0.5rem; 
+            margin-top: 2rem;
+        }
+        ul { 
+            list-style-type: none; 
+            padding-left: 0; 
+        }
+        li { 
+            margin-bottom: 0.75rem; 
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        li:before {
+            content: "•";
+            color: #3498db;
+            position: absolute;
+            left: 0;
         }
         .project { 
             background: #f9f9f9; 
-            padding: 1.2rem; 
+            padding: 1.5rem; 
             margin-bottom: 1.5rem; 
             border-radius: 6px; 
-            border-left: 5px solid #3498db;
+            border-left: 6px solid #3498db;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
         footer { 
             text-align: center; 
@@ -58,50 +81,115 @@
             color: white; 
             margin-top: 2rem;
         }
-        a { color: #2980b9; }
+        a { color: #2980b9; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
     <header>
-        <p class="subtitle">Mechanical Engineering Technologist | Industrial Automation & Plant Systems Specialist</p>
+        <!-- Photo placeholder - upload your photo as photo.jpg in the repo -->
+        <img src="photo.jpg" alt="Cameron Evenson" 
+             style="width: 160px; height: 160px; border-radius: 50%; border: 5px solid white; margin-bottom: 1rem; object-fit: cover;">
+        
+        <h1>Cameron Evenson</h1>
+        <p class="subtitle">Mechanical Engineering Technologist | Industrial Automation &amp; Plant Systems Specialist</p>
+        
+        <div class="contact-info">
+            132 Drake Landing Loop, Okotoks, Alberta<br>
+            403-437-0110 | <a href="mailto:cam.evenson@outlook.com">cam.evenson@outlook.com</a><br>
+            <a href="https://www.linkedin.com/in/camevenson" target="_blank">LinkedIn Profile</a>
+        </div>
     </header>
 
     <div class="container">
+        
+        <!-- Professional Profile -->
         <section>
-            <h2>About Me</h2>
-            <p>Experienced professional with over 30 years bridging mechanical engineering, plastics extrusion, industrial IT, automation, and custom software solutions. Currently open to full-time opportunities in automation, systems integration, software development, heavy equipment, or related technical roles in Alberta and beyond.</p>
+            <h2>Professional Profile</h2>
+            <p>I am a results-driven systems analyst and software developer with 15+ years’ expertise in automation, industrial system integration, and data-driven solutions for the manufacturing and energy sectors. I am skilled at leading complex projects that bridge IT and OT environments, leveraging advanced software development and data modeling to streamline operations, optimize performance, and reduce costs. I have been recognized for translating process control knowledge into innovative, cost-effective solutions that deliver measurable business value.</p>
         </section>
 
+        <!-- Core Technical Skills -->
         <section>
-            <h2>Experience Highlights</h2>
+            <h2>Core Technical Skills</h2>
+            <div class="skills-grid">
+                <div>
+                    <strong>Programming &amp; Scripting</strong><br>
+                    VB.NET, C#, C/C++, Python, Fortran
+                </div>
+                <div>
+                    <strong>Frameworks &amp; Tools</strong><br>
+                    WPF/WCF, Dapper, Docker, GitHub
+                </div>
+                <div>
+                    <strong>Databases &amp; Data Modeling</strong><br>
+                    MS SQL Server, Data Historians (PARCview, Aveva PI)
+                </div>
+                <div>
+                    <strong>Platforms &amp; Systems</strong><br>
+                    Windows Server, Office 365
+                </div>
+                <div>
+                    <strong>Visualization &amp; Reporting</strong><br>
+                    XHQ, Custom Dashboards, Golden Batch Analysis
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section>
+            <h2>Professional Experience</h2>
+            
+            <div class="project">
+                <h3>Senior Plant Systems Analyst</h3>
+                <p><strong>Capstone Technology, Calgary, Alberta</strong> | 2016 – Present</p>
+                <p>Designed and deployed a Manufacturing Execution System for ethanol production, integrating laboratory test equipment and automating data workflows to cut manual data entry by 60%, improving accuracy and traceability. Delivered real-time operational dashboards for golden batch tracking and recipe optimization, enhancing process efficiency. Led the full technical integration using VB.NET, C#, SQL Server, Docker, PARCview, Python, and WPF, aligning IT and OT systems for seamless performance.</p>
+            </div>
+            
+            <div class="project">
+                <h3>Senior Plant Systems Specialist</h3>
+                <p><strong>Husky Energy Inc., Calgary, Alberta</strong> | 2012 – May 2016</p>
+                <p>Directed multiple technology projects for the Sunrise SAGD facility, delivering four operational systems within aggressive deadlines. Coordinated cross-functional teams of developers, engineers, and site personnel to ensure seamless deployment, meeting all budget targets while exceeding partner expectations. Leveraged OSI PI Historian, SCADA, SQL, and XHQ to enable robust data collection and visualization, enhancing operational decision-making.</p>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2>Education</h2>
             <ul>
-                <li><strong>Plant Systems Analyst & Lead</strong> — Data historians (OSI PI, AVEVA), MES implementations, SCADA, and complex integrations.</li>
-                <li><strong>Plastics Extrusion Specialist</strong> — Extensive hands-on and technical experience.</li>
-                <li><strong>IT & Development</strong> — C#, SQL Server, Python, Docker, custom applications and tools.</li>
+                <li><strong>Red River College</strong> – Diploma in Mechanical Engineering Technology<br>
+                    Majored in Machine Design and Non-Destructive Testing; minored in Time and Motion Studies</li>
+                <li><strong>CDI College of Technology and Business</strong> – Certified in Software Development and Network Administration<br>
+                    Graduated with Honors</li>
             </ul>
         </section>
 
+        <!-- Certifications &amp; Professional Training -->
         <section>
-            <h2>Projects & Technical Skills</h2>
-            <div class="project">
-                <h3>Custom Fermentation Tracking & MES System</h3>
-                <p>Integrated sampling instruments with data historians and reporting for efficient operations.</p>
-            </div>
-            <div class="project">
-                <h3>3D Printing & Modeling</h3>
-                <p>Prusa printer workflows, Orca Slicer, Fusion 360 designs and practical builds.</p>
-            </div>
-            <!-- Add more projects here as needed -->
+            <h2>Certifications &amp; Professional Training</h2>
+            <ul>
+                <li>Python AI Development – Cognitiveclass.ai</li>
+                <li>Visual Studio .NET C# Masterclass — Microsoft Masterclass with Tim Corey</li>
+                <li>Microsoft SQL Server Masterclass</li>
+                <li>Microsoft Development Business Partner – Software and Server Development Partner</li>
+                <li>Introduction to Data Science — University of Waterloo</li>
+            </ul>
         </section>
 
+        <!-- Additional Information -->
         <section>
-            <h2>Contact & Opportunities</h2>
-            <p>Available for new roles. Feel free to reach out via <a href="mailto:cam.evenson@outlook.com">email</a> or <a href="https://www.linkedin.com/in/camevenson/">LinkedIn.</a></p>
+            <h2>Additional Information</h2>
+            <ul>
+                <li>Open to roles in automation, plant systems, industrial software, and integration projects.</li>
+                <li>Strong communication skills and effective collaborator with engineering, IT, and field teams.</li>
+                <li>Committed to contributing to inclusive and diverse workplaces; eligible for employment equity consideration as a person with a disability.</li>
+            </ul>
         </section>
+
     </div>
 
     <footer>
-        <p>© Cameron Evenson • Personal Professional Portfolio</p>
+        <p>© Cameron Evenson • Personal Professional Portfolio • Okotoks, Alberta</p>
     </footer>
 </body>
 </html>
